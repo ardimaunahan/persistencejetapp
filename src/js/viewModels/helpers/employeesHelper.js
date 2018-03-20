@@ -2,7 +2,7 @@ define(['ojs/ojcore', 'knockout'], function (oj, ko) {
 
     function EmployeesHelperViewModule() {
         var self = this;
-        var urlEmployees = "http://host:port/restapp/rest/1/Employees";
+        var urlEmployees = "http://localhost:3000/employees";
 
         self.createEmployeeModel = function () {
             var EmployeeModel = oj.Model.extend({
