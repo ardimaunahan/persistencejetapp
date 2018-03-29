@@ -1,8 +1,15 @@
-define(['ojs/ojcore', 'knockout'], function (oj, ko) {
-
+define([
+    '../../resources/config',
+    'ojs/ojcore',
+    'knockout'
+], function (
+    config,
+    oj,
+    ko
+) {
     function EmployeesHelperViewModule() {
         var self = this;
-        var urlEmployees = "http://localhost:3000/employees";
+        var urlEmployees = "https://" + config.hostname + "/api/jet/Employees";
 
         self.createEmployeeModel = function () {
             var EmployeeModel = oj.Model.extend({
